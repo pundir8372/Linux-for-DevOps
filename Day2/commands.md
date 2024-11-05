@@ -1,149 +1,98 @@
 Day 2: Linux Commands
-Create and List Directories
+Command History and Explanations
+Directory and File Management
 Create a directory:
 
-bash
-Copy code
-mkdir cloud                # Creates 'cloud' directory
-List files with details:
+mkdir cloud
 
-bash
-Copy code
-ls -l                      # Lists files with details
-Navigating Directories
-Change to 'devops' directory:
+List directory contents in detail:
 
-bash
-Copy code
-cd devops/                 # Changes to 'devops' directory
-Print the current working directory:
+ls -l
 
-bash
-Copy code
-pwd                        # Prints the current working directory
-Move one directory up:
+Navigate into a directory:
 
-bash
-Copy code
-cd ..                      # Moves one directory up
-Navigate to 'bin' directory:
+cd devops/
 
-bash
-Copy code
-cd bin                     # Navigates to 'bin' directory
-Navigate to full path of 'devops':
+Return to the previous directory:
 
-bash
-Copy code
-cd /home/ubuntu/devops     # Navigates to full path of 'devops'
-File Operations in Devops
-Create an empty file named 'devops_file.txt':
+cd ..
 
-bash
-Copy code
-touch devops_file.txt      # Creates an empty file named 'devops_file.txt'
-Remove the file:
+Print the current directory path:
 
-bash
-Copy code
-rm devops_file.txt         # Removes the file
-Delete the 'cloud' directory:
+pwd
 
-bash
-Copy code
-rm -r cloud/               # Deletes the 'cloud' directory
-Remove 'devops' directory if empty:
+Create an empty file:
 
-bash
-Copy code
-rmdir devops/              # Removes 'devops' directory if empty
-Creating and Modifying Files
-Create 'demoFile.txt':
+touch devops_file.txt
 
-bash
-Copy code
-touch demoFile.txt         # Creates 'demoFile.txt'
-Display contents of 'demoFile.txt':
+Delete a file:
 
-bash
-Copy code
-cat demoFile.txt           # Displays contents of 'demoFile.txt'
-Add content to 'demoFile2.txt':
+rm devops_file.txt
 
-bash
-Copy code
-echo "This is a second demo file" > demoFile2.txt  # Adds content to 'demoFile2.txt'
-Create 'myFile.txt':
+Delete a directory and its contents:
 
-bash
-Copy code
-touch myFile.txt           # Creates 'myFile.txt'
-Add content to 'myFile.txt':
+rm -r cloud/
 
-bash
-Copy code
-echo "This is my personal file" > myFile.txt       # Adds content to 'myFile.txt'
-Copying and Moving Files Between Directories
-Recreate 'devops' directory:
+Delete an empty directory:
 
-bash
-Copy code
-mkdir devops               # Recreates 'devops' directory
-Copy 'myFile.txt' to 'devops':
+rmdir devops/
 
-bash
-Copy code
-cp myFile.txt devops/      # Copies 'myFile.txt' to 'devops'
-Create 'devopsFile.txt' in 'devops':
+Viewing and Editing Files
+Create and view a file:
 
-bash
-Copy code
-touch devopsFile.txt       # Creates 'devopsFile.txt' in 'devops'
-Copy 'cloud' directory into 'devops':
+touch demoFile.txt
 
-bash
-Copy code
-cp -r cloud/ devops/       # Copies 'cloud' directory into 'devops'
-Rename Directory
-Rename 'devops' to 'linux_for_devops':
-bash
-Copy code
-mv devops/ linux_for_devops   # Renames 'devops' to 'linux_for_devops'
-Word Count and Difference Check
-Display contents of 'fruits.txt':
+cat demoFile.txt
 
-bash
-Copy code
-cat fruits.txt             # Displays contents of 'fruits.txt'
-Count lines, words, and characters in 'fruits.txt':
+Write text to a file:
 
-bash
-Copy code
-wc fruits.txt              # Counts lines, words, and characters in 'fruits.txt'
-Compare two files:
+echo "This is a second demo file" > demoFile2.txt
 
-bash
-Copy code
-diff demoFile.txt demoFile2.txt   # Compares two files
-Soft Link Operations
+View file contents:
+
+cat demoFile2.txt
+
+Display the first lines of a file:
+
+head myFile.txt
+
+File Copying and Moving
+Copy a file to another directory:
+
+cp myFile.txt devops/
+
+Copy a directory with the recursive option:
+
+cp -r cloud/ devops/
+
+Move a file to another directory:
+
+mv myFile.txt ../cloud/
+
+Symbolic Links
 Create a symbolic link:
 
-bash
-Copy code
-ln -s /home/ubuntu/linux_for_devops/cloud/devopsFile.txt softlink-file   # Creates a symbolic link
-Display contents through soft link:
+ln -s /home/ubuntu/linux_for_devops/cloud/devopsFile.txt softlink-file
 
-bash
-Copy code
-cat softlink-file          # Displays contents through soft link
-Additional File Operations
-Modify content of 'devopsFile.txt':
+Remove a symbolic link:
 
-bash
-Copy code
-echo "This file was changed" > devopsFile.txt    # Modifies content of 'devopsFile.txt'
-Display modified content:
+rm softlink-file
 
-bash
-Copy code
-cat devopsFile.txt         # Displays modified content
+Text Manipulation
+Display selected bytes from each line:
+
+cut -b 1-3 demoFile.txt
+
+Compare contents of two files:
+
+diff demoFile.txt demoFile2.txt
+
+Miscellaneous
+Count words in a file:
+
+wc fruits.txt
+
+View command history:
+
+history
+
