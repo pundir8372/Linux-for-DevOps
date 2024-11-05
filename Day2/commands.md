@@ -1,121 +1,45 @@
-# Day 2: Linux Commands
+# Create and list directories
+mkdir cloud                # Creates 'cloud' directory
+ls -l                      # Lists files with details
 
-## Command History and Explanations
+# Navigating directories
+cd devops/                 # Changes to 'devops' directory
+pwd                        # Prints the current working directory
+cd ..                      # Moves one directory up
+cd bin                     # Navigates to 'bin' directory
 
-### Directory and File Management
+# File operations in devops
+cd /home/ubuntu/devops     # Navigates to full path of 'devops'
+touch devops_file.txt      # Creates an empty file named 'devops_file.txt'
+rm devops_file.txt         # Removes the file
+rm -r cloud/               # Deletes the 'cloud' directory
+rmdir devops/              # Removes 'devops' directory if empty
 
-- **Create a directory**:
-  ```bash
-  mkdir cloud
-List directory contents in detail:
+# Creating and modifying files
+touch demoFile.txt         # Creates 'demoFile.txt'
+cat demoFile.txt           # Displays contents of 'demoFile.txt'
+echo "This is a second demo file" > demoFile2.txt  # Adds content to 'demoFile2.txt'
+touch myFile.txt           # Creates 'myFile.txt'
+echo "This is my personal file" > myFile.txt       # Adds content to 'myFile.txt'
 
-bash
-Copy code
-ls -l
-Navigate into a directory:
+# Copying and moving files between directories
+mkdir devops               # Recreates 'devops' directory
+cp myFile.txt devops/      # Copies 'myFile.txt' to 'devops'
+touch devopsFile.txt       # Creates 'devopsFile.txt' in 'devops'
+cp -r cloud/ devops/       # Copies 'cloud' directory into 'devops'
 
-bash
-Copy code
-cd devops/
-Return to the previous directory:
+# Rename directory
+mv devops/ linux_for_devops   # Renames 'devops' to 'linux_for_devops'
 
-bash
-Copy code
-cd ..
-Print the current directory path:
+# Word count and difference check
+cat fruits.txt             # Displays contents of 'fruits.txt'
+wc fruits.txt              # Counts lines, words, and characters in 'fruits.txt'
+diff demoFile.txt demoFile2.txt   # Compares two files
 
-bash
-Copy code
-pwd
-Create an empty file:
+# Soft link operations
+ln -s /home/ubuntu/linux_for_devops/cloud/devopsFile.txt softlink-file   # Creates a symbolic link
+cat softlink-file          # Displays contents through soft link
 
-bash
-Copy code
-touch devops_file.txt
-Delete a file:
-
-bash
-Copy code
-rm devops_file.txt
-Delete a directory and its contents:
-
-bash
-Copy code
-rm -r cloud/
-Delete an empty directory:
-
-bash
-Copy code
-rmdir devops/
-Viewing and Editing Files
-Create and view a file:
-
-bash
-Copy code
-touch demoFile.txt
-cat demoFile.txt
-Write text to a file:
-
-bash
-Copy code
-echo "This is a second demo file" > demoFile2.txt
-View file contents:
-
-bash
-Copy code
-cat demoFile2.txt
-Display the first lines of a file:
-
-bash
-Copy code
-head myFile.txt
-File Copying and Moving
-Copy a file to another directory:
-
-bash
-Copy code
-cp myFile.txt devops/
-Copy a file with recursive option (for directories):
-
-bash
-Copy code
-cp -r cloud/ devops/
-Move a file to another directory:
-
-bash
-Copy code
-mv myFile.txt ../cloud/
-Symbolic Links
-Create a symbolic link:
-
-bash
-Copy code
-ln -s /home/ubuntu/linux_for_devops/cloud/devopsFile.txt softlink-file
-Remove a symbolic link:
-
-bash
-Copy code
-rm softlink-file
-Text Manipulation
-Display selected bytes from each line:
-
-bash
-Copy code
-cut -b 1-3 demoFile.txt
-Compare contents of two files:
-
-bash
-Copy code
-diff demoFile.txt demoFile2.txt
-Miscellaneous
-Count words in a file:
-
-bash
-Copy code
-wc fruits.txt
-View command history:
-
-bash
-Copy code
-history
-
+# Additional file operations
+echo "This file was changed" > devopsFile.txt    # Modifies content of 'devopsFile.txt'
+cat devopsFile.txt         # Displays modified content
