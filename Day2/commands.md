@@ -1,98 +1,82 @@
-Day 2: Linux Commands
-Command History and Explanations
-Directory and File Management
-Create a directory:
+# Day 2: Linux Commands
 
-mkdir cloud
+## Command History and Explanations
 
-List directory contents in detail:
+### Directory and File Management
 
-ls -l
+- **Create a directory**:  
+  `mkdir cloud`
 
-Navigate into a directory:
+- **List directory contents in detail**:  
+  `ls -l`
 
-cd devops/
+- **Navigate into a directory**:  
+  `cd devops/`
 
-Return to the previous directory:
+- **Return to the previous directory**:  
+  `cd ..`
 
-cd ..
+- **Print the current directory path**:  
+  `pwd`
 
-Print the current directory path:
+- **Create an empty file**:  
+  `touch devops_file.txt`
 
-pwd
+- **Delete a file**:  
+  `rm devops_file.txt`
 
-Create an empty file:
+- **Delete a directory and its contents**:  
+  `rm -r cloud/`
 
-touch devops_file.txt
+- **Delete an empty directory**:  
+  `rmdir devops/`
 
-Delete a file:
+### Viewing and Editing Files
 
-rm devops_file.txt
+- **Create and view a file**:  
+  `touch demoFile.txt`  
+  `cat demoFile.txt`
 
-Delete a directory and its contents:
+- **Write text to a file**:  
+  `echo "This is a second demo file" > demoFile2.txt`
 
-rm -r cloud/
+- **View file contents**:  
+  `cat demoFile2.txt`
 
-Delete an empty directory:
+- **Display the first lines of a file**:  
+  `head myFile.txt`
 
-rmdir devops/
+### File Copying and Moving
 
-Viewing and Editing Files
-Create and view a file:
+- **Copy a file to another directory**:  
+  `cp myFile.txt devops/`
 
-touch demoFile.txt
+- **Copy a directory with the recursive option**:  
+  `cp -r cloud/ devops/`
 
-cat demoFile.txt
+- **Move a file to another directory**:  
+  `mv myFile.txt ../cloud/`
 
-Write text to a file:
+### Symbolic Links
 
-echo "This is a second demo file" > demoFile2.txt
+- **Create a symbolic link**:  
+  `ln -s /home/ubuntu/linux_for_devops/cloud/devopsFile.txt softlink-file`
 
-View file contents:
+- **Remove a symbolic link**:  
+  `rm softlink-file`
 
-cat demoFile2.txt
+### Text Manipulation
 
-Display the first lines of a file:
+- **Display selected bytes from each line**:  
+  `cut -b 1-3 demoFile.txt`
 
-head myFile.txt
+- **Compare contents of two files**:  
+  `diff demoFile.txt demoFile2.txt`
 
-File Copying and Moving
-Copy a file to another directory:
+### Miscellaneous
 
-cp myFile.txt devops/
+- **Count words in a file**:  
+  `wc fruits.txt`
 
-Copy a directory with the recursive option:
-
-cp -r cloud/ devops/
-
-Move a file to another directory:
-
-mv myFile.txt ../cloud/
-
-Symbolic Links
-Create a symbolic link:
-
-ln -s /home/ubuntu/linux_for_devops/cloud/devopsFile.txt softlink-file
-
-Remove a symbolic link:
-
-rm softlink-file
-
-Text Manipulation
-Display selected bytes from each line:
-
-cut -b 1-3 demoFile.txt
-
-Compare contents of two files:
-
-diff demoFile.txt demoFile2.txt
-
-Miscellaneous
-Count words in a file:
-
-wc fruits.txt
-
-View command history:
-
-history
-
+- **View command history**:  
+  `history`
