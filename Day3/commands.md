@@ -87,3 +87,54 @@
 ### `history`
 - Displays a list of all previous commands in the session 📜
 - A handy way to revisit your past actions.
+
+---
+
+### `cd linux_for_devops`
+- Changes the directory to `linux_for_devops`.
+
+### `ls -l`
+- Lists files in the current directory with detailed information, including permissions and ownership.
+
+### `chmod 777 cloud`
+- Changes permissions of the `cloud` directory to read, write, and execute for all users.
+
+### `chmod 700 devopsFile.txt`
+- Restricts `devopsFile.txt` permissions to read, write, and execute for the owner only.
+
+### `umask`
+- Displays the current default permission mask for newly created files.
+
+### `sudo chown jethalal demoFile.txt`
+- Changes the owner of `demoFile.txt` to user `jethalal`.
+
+### `sudo chgrp devops demoFile.txt`
+- Changes the group ownership of `demoFile.txt` to `devops`.
+
+### `sudo apt install zip`
+- Installs the `zip` utility if not already installed.
+
+### `which zip`
+- Locates the `zip` executable, confirming its installation.
+
+### `zip -r ldf.zip linux_for_devops/`
+- Compresses the `linux_for_devops` directory into a zip file named `ldf.zip`.
+
+### `mkdir unzipped_files`
+- Creates a directory named `unzipped_files`.
+
+### `cp ldf.zip cloud/unzipped_files`
+- Copies `ldf.zip` to the `cloud/unzipped_files` directory.
+
+### `unzip ldf.zip`
+- Extracts the contents of `ldf.zip` in the current directory.
+
+### `scp`
+- Securely copies files between the local machine and a remote server or between two remote servers.
+  - Example: `scp file.txt user@remote_server:/path/to/destination`
+  - Can be used to transfer files both from local to server and from server to local.
+
+### `rsync`
+- A powerful and efficient tool for syncing files and directories between two locations over SSH or on a local machine.
+  - Example: `rsync -avz source_dir user@remote_server:/destination_dir`
+  - Supports incremental sync, reducing data transfer by only copying changes.
